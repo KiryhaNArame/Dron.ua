@@ -1,0 +1,292 @@
+/* Загальні стилі */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: #f3f4f6;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+/* Темна тема */
+body.dark {
+  background-color: #1e293b;
+  color: #f1f5f9;
+}
+
+body.dark header,
+body.dark footer {
+  background-color: #0f172a;
+}
+
+body.dark section {
+  background: #334155;
+}
+
+body.dark nav a {
+  color: #a5b4fc;
+}
+
+/* Хедер */
+header {
+  background: #0f172a;
+  color: #fff;
+  padding: 20px 15px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+nav a {
+  color: #60a5fa;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 3px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #3b82f6;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #60a5fa;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a:focus::after {
+  width: 100%;
+}
+
+/* Темна тема кнопка */
+#themeToggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: white;
+  user-select: none;
+}
+
+/* Основний контент */
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+section {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+section:hover {
+  transform: scale(1.02);
+}
+
+section h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Іконки у заголовках */
+section h2 i {
+  color: #60a5fa;
+}
+
+/* Зображення */
+img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+}
+
+img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Відео */
+.video {
+  margin-top: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.video:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
+}
+
+/* Таблиця */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+table th {
+  background-color: #60a5fa;
+  color: white;
+}
+
+/* Форма */
+form label {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 6px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+form button {
+  background-color: #60a5fa;
+  border: none;
+  padding: 12px 20px;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 700;
+}
+
+form button:hover {
+  background-color: #3b82f6;
+}
+
+/* FAQ */
+details {
+  margin-bottom: 15px;
+  cursor: pointer;
+  background: #f9fafb;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+details summary {
+  font-weight: 700;
+  font-size: 18px;
+  outline: none;
+}
+
+details p {
+  margin: 10px 0 0 15px;
+  font-size: 16px;
+  color: #374151;
+}
+
+/* Кнопка "До верху" */
+#topBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #60a5fa;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 12px 16px;
+  font-size: 18px;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+#topBtn:hover {
+  background-color: #3b82f6;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  main {
+    margin: 20px auto;
+    padding: 0 10px;
+  }
+
+  header h1 {
+    font-size: 22px;
+  }
+
+  section h2 {
+    font-size: 20px;
+  }
+
+  table,
+  table th,
+  table td {
+    font-size: 14px;
+  }
+}
