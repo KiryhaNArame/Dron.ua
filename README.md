@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <title>Світ дронів</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <style>
+    /* --- Вбудовані базові стилі для таблиці та форми --- */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+      font-size: 16px;
+    }
+    table th,
+    table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+    table th {
+      background-color: #60a5fa;
+      color: white;
+    }
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      margin-bottom: 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      resize: vertical;
+    }
+    form button {
+      background-color: #60a5fa;
+      border: none;
+      padding: 12px 20px;
+      color: white;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    form button:hover {
+      background-color: #3b82f6;
+    }
+    details {
+      margin-bottom: 12px;
+      cursor: pointer;
+    }
+    details summary {
+      font-weight: bold;
+      font-size: 18px;
+      outline: none;
+    }
+    details p {
+      margin-left: 15px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    /* Кнопка Поділитись */
+    #shareBtn {
+      background: transparent;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+      color: white;
+      user-select: none;
+      margin-left: 10px;
+      padding: 0 6px;
+    }
+    #shareBtn:hover {
+      color: #93c5fd;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Світ дронів</h1>
+    <button id="themeToggle" title="Змінити тему">🌙 / ☀️</button>
+    <button id="shareBtn" title="Поділитися посиланням">📤 Поділитись</button>
+    <nav>
+      <a href="#fpv"><i class="fas fa-drone"></i> FPV</a>
+      <a href="#recon"><i class="fas fa-eye"></i> Розвідувальні</a>
+      <a href="#heavy"><i class="fas fa-plane"></i> Великі дрони</a>
+      <a href="#map"><i class="fas fa-map-marker-alt"></i> Мапа</a>
+      <a href="#contact"><i class="fas fa-envelope"></i> Зв’язок</a>
+      <a href="#compare"><i class="fas fa-table"></i> Порівняння</a>
+      <a href="#countdown"><i class="fas fa-clock"></i> Таймер</a>
+      <a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="fpv">
+      <h2><i class="fas fa-drone"></i> FPV дрони</h2>
+      <p>
+        FPV (First Person View) — це дрони для перегонів та відеозйомки з
+        першої особи. Вони швидкі, маневрені і часто керуються через окуляри.
+      </p>
+      <img
+        src="https://cdn.pixabay.com/photo/2017/08/06/22/01/drone-2592399_1280.jpg"
+        alt="FPV дрон"
+      />
+      <div class="video">
+        <iframe
+          width="100%"
+          height="315"
+          src="https://www.youtube.com/embed/f9Ji-tVt8y4"
+          title="Beginner FPV Drone Guide"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+
+    <section id="recon">
+      <h2><i class="fas fa-eye"></i> Розвідувальні дрони</h2>
+      <p>
+        Ці дрони використовуються військовими та рятувальними службами для
+        зйомки, розвідки територій та спостереження.
+      </p>
+      <img
+        src="https://cdn.pixabay.com/photo/2018/01/31/07/58/drone-3126553_1280.jpg"
+        alt="Розвідувальний дрон"
+      />
+    </section>
+
+    <section id="heavy">
+      <h2><i class="fas fa-plane"></i> Великі дрони (типу Лелека)</h2>
+      <p>
+        Такі дрони мають велику дальність польоту, здатні нести корисне
+        навантаження, камери або сенсори. В Україні один із прикладів — «Лелека-100».
+      </p>
+      <img
+        src="https://cdn.pixabay.com/photo/2020/06/28/00/06/drone-5348675_1280.jpg"
+        alt="Великий дрон"
+      />
+    </section>
+
+    <section id="map">
+      <h2><i class="fas fa-map-marker-alt"></i> Мапа FPV-локацій</h2>
+      <p>Ось декілька популярних місць для FPV-польотів в Україні:</p>
+      <iframe
+        src="https://www.google.com/maps/d/u/0/embed?mid=1BMHZ74LyFb3K2Q-c-HMcp8EynRilRgk&ehbc=2E312F"
+        width="100%"
+        height="400"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </section>
+
+    <section id="contact">
+      <h2><i class="fas fa-envelope"></i> Зв’язатися з нами</h2>
+      <form>
+        <label for="name">Ім’я:</label><br />
+        <input type="text" id="name" name="name" /><br /><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" /><br /><br />
+
+        <label for="message">Повідомлення:</label><br />
+        <textarea id="message" name="message" rows="4"></textarea><br /><br />
+
+        <button type="submit">Надіслати</button>
+      </form>
+    </section>
+
+    <section id="compare">
+      <h2><i class="fas fa-table"></i> Порівняння популярних дронів</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Модель</th>
+            <th>Тип</th>
+            <th>Час польоту</th>
+            <th>Дальність</th>
+            <th>Ціна (орієнт.)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>DJI Mini 2</td>
+            <td>Рекреаційний</td>
+            <td>~30 хв</td>
+            <td>10 км</td>
+            <td>$450</td>
+          </tr>
+          <tr>
+            <td>EMAX Tinyhawk</td>
+            <td>FPV</td>
+            <td>~5 хв</td>
+            <td>200 м</td>
+            <td>$120</td>
+          </tr>
+          <tr>
+            <td>Лелека-100</td>
+            <td>Військовий</td>
+            <td>~2 год</td>
+            <td>50+ км</td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="countdown">
+      <h2><i class="fas fa-clock"></i> До наступних FPV-змагань залишилось:</h2>
+      <p id="timer">Завантаження...</p>
+    </section>
+
+    <section id="faq">
+      <h2><i class="fas fa-question-circle"></i> FAQ — Поширені питання</h2>
+      <details>
+        <summary>Чи можна літати в місті?</summary>
+        <p>Ні. Польоти над людьми або в населених зонах обмежені законом.</p>
+      </details>
+      <details>
+        <summary>Який дрон краще для початку?</summary>
+        <p>EMAX Tinyhawk або BetaFPV — бюджетні та безпечні.</p>
+      </details>
+      <details>
+        <summary>Чи потрібна ліцензія?</summary>
+        <p>Для комерційного використання — так. Для хобі — залежить від ваги дрона.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Світ дронів. Всі права захищено.</p>
+  </footer>
+
+  <button id="topBtn" title="До верху">🔝</button>
+
+  <script>
+    // Кнопка "До верху"
+    const topBtn = document.getElementById("topBtn");
+    window.onscroll = function () {
+      topBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    };
+    topBtn.onclick = function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    // Темна тема
+    const themeBtn = document.getElementById("themeToggle");
+    themeBtn.onclick = function () {
+      document.body.classList.toggle("dark");
+    };
+
+    // Кнопка поділитись посиланням
+    const shareBtn = document.getElementById("shareBtn");
+    shareBtn.addEventListener("click", () => {
+      const url = window.location.href;
+      if (navigator.share) {
+        navigator.share({
+          title: document.title,
+          url: url,
+        }).catch(() => {
+          alert("Вибачте, не вдалося поділитись посиланням.");
+        });
+      } else if (navigator.clipboard) {
+        navigator.clipboard
+          .writeText(url)
+          .then(() => {
+            alert("Посилання скопійовано в буфер обміну!");
+          })
+          .catch(() => {
+            alert("Не вдалося скопіювати посилання.");
+          });
+      } else {
+        prompt("Скопіюйте посилання нижче:", url);
+      }
+    });
+
+    // Таймер
+    const timer = document.getElementById("timer");
+    const targetDate = new Date("2025-08-01T12:00:00");
+    setInterval(() => {
+      const now = new Date();
+      const diff = targetDate - now;
+      if (diff <= 0) {
+        timer.textContent = "Подія розпочалась!";
+        return;
+      }
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / 1000 / 60) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+      timer.textContent = `${days}д ${hours}г ${minutes}хв ${seconds}с`;
+    }, 1000);
+  </script>
+</body>
+</html>
